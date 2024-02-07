@@ -92,23 +92,16 @@ function clickHandler(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  const selectedImage = event.target.dataset.source;
-
+  const selectedImageUrl = event.target.dataset.source;
 
   const instance = basicLightbox.create(`
     <div class="modal">
-      <img
-      src="${selectedImage}"
+      <img 
+      src="${selectedImageUrl}" alt="" width="1112" height="640"
     />
+    </div>`);
 
-    </div>
-`);
-
-instance.show()
-
-
-
-  console.log(selectedImage);
+  instance.show();
 }
 
 gallery.addEventListener('click', clickHandler);
