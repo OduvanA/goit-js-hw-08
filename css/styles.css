@@ -21,7 +21,7 @@ img {
 }
 
 a:hover {
-  cursor: url(./images/pointer.png), pointer;
+  cursor: url(../images/pointer.png), pointer;
 }
 
 .container {
