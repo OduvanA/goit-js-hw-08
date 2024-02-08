@@ -83,12 +83,9 @@ const markup = images.map(({preview, original, description}) =>
   .join("");
 gallery.insertAdjacentHTML("beforeend", markup);
 
-const galleryLink = document.querySelectorAll('.gallery-link');
-galleryLink.forEach(link =>
-  link.addEventListener('click', event => event.preventDefault()));
-
 const galleryImage = document.querySelector('.gallery-image')
 function clickHandler(event) {
+  event.preventDefault()
   if (event.target.nodeName !== "IMG") {
     return;
   }
